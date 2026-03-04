@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLUCOCONTROL</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f7fb;
+}
+
+header{
+background:linear-gradient(to right,#1e3c72,#2a5298);
+color:white;
+text-align:center;
+padding:50px 15px;
+}
+
+header h1{
+font-size:2.8rem;
+letter-spacing:3px;
+margin:0;
+}
+
+nav{
+background:white;
+text-align:center;
+padding:12px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+nav button{
+margin:6px;
+padding:8px 14px;
+border:none;
+border-radius:6px;
+background:#2a5298;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
+
+nav button:hover{
+background:#163a6b;
+}
+
+.seccion{
+width:92%;
+max-width:1000px;
+margin:20px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+display:none;
+}
+
+.visible{
+display:block;
+}
+
+.educacion-bloque{
+background:#eef3fb;
+padding:18px;
+margin-bottom:18px;
+border-radius:10px;
+}
+
+.card{
+display:inline-block;
+width:240px;
+background:#eef3fb;
+padding:15px;
+margin:12px;
+border-radius:10px;
+text-align:center;
+}
+
+.card img{
+width:130px;
+height:130px;
+object-fit:cover;
+border-radius:50%;
+border:3px solid #2a5298;
+}
+
+.card button{
+margin-top:8px;
+padding:6px 12px;
+border:none;
+background:#28a745;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+.drop-area{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-around;
+margin-top:15px;
+}
+
+.zona{
+width:45%;
+min-height:220px;
+border:2px dashed #999;
+border-radius:10px;
+padding:10px;
+margin-top:10px;
+}
+
+.zona h4{
+text-align:center;
+}
+
+.draggable{
+width:100px;
+margin:8px;
+cursor:grab;
+}
+
+.resultado{
+font-weight:bold;
+margin-top:15px;
+}
+
+.modal{
+display:none;
+position:fixed;
+z-index:1000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.modal-contenido{
+background:white;
+width:90%;
+max-width:500px;
+margin:10% auto;
+padding:20px;
+border-radius:10px;
+}
+
+.cerrar{
+float:right;
+font-size:20px;
+cursor:pointer;
+}
+
+footer{
+background:#1e3c72;
+color:white;
+text-align:center;
+padding:18px;
+margin-top:30px;
+}
+
+@media(max-width:768px){
+.card{width:90%;}
+.zona{width:100%;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>GLUCOCONTROL</h1>
+</header>
+
+<nav>
+<button onclick="mostrarSeccion('inicio')">Inicio</button>
+<button onclick="mostrarSeccion('educacion')">Educación</button>
+<button onclick="mostrarSeccion('actividades')">Actividades</button>
+<button onclick="mostrarSeccion('equipo')">Especialistas</button>
+</nav>
+
+<section id="inicio" class="seccion visible">
+<h2>Bienvenido a GLUCOCONTROL</h2>
+<p>
+GLUCOCONTROL es una plataforma educativa diseñada para brindar información clara y profesional a personas con Diabetes Mellitus Tipo 2.
+</p>
+<p>
+El adecuado control de la diabetes requiere educación constante, alimentación equilibrada, actividad física regular y seguimiento médico.
+</p>
+<p>
+Aquí encontrarás orientación nutricional y acceso a especialistas capacitados.
+</p>
+</section>
+
+<section id="educacion" class="seccion">
+<h2>Educación sobre Diabetes Mellitus Tipo 2</h2>
+
+<div class="educacion-bloque">
+<h3>¿Qué es la Diabetes Mellitus Tipo 2?</h3>
+<p>
+La Diabetes Mellitus Tipo 2 es una enfermedad crónica caracterizada por resistencia a la insulina y elevación persistente de glucosa en sangre.
+</p>
+<p>
+Si no se controla adecuadamente puede provocar complicaciones cardiovasculares, daño renal, neuropatías y problemas visuales.
+</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Resistencia a la insulina</h3>
+<p>
+En esta condición las células del cuerpo no responden correctamente a la insulina, dificultando la entrada de glucosa a los tejidos.
+</p>
+<p>
+Factores como sobrepeso, sedentarismo y predisposición genética influyen en su desarrollo.
+</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Alimentación y control glucémico</h3>
+<p>
+Una alimentación equilibrada ayuda a mantener niveles estables de glucosa y prevenir complicaciones.
+</p>
+<p>
+Se recomienda priorizar verduras, frutas en porciones controladas, cereales integrales y proteínas magras.
+</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Importancia de la fibra</h3>
+<p>
+La fibra dietética retrasa la absorción de glucosa, ayudando a evitar picos bruscos.
+</p>
+<p>
+Se encuentra en leguminosas, frutas, verduras y cereales integrales.
+</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Actividad física</h3>
+<p>
+El ejercicio mejora la sensibilidad a la insulina y contribuye al control del peso corporal.
+</p>
+<p>
+Se recomienda al menos 30 minutos diarios de actividad moderada.
+</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Seguimiento médico</h3>
+<p>
+El control periódico permite evaluar niveles de glucosa y prevenir complicaciones a largo plazo.
+</p>
+</div>
+
+</section>
+
+<section id="actividades" class="seccion">
+<h2>Clasifica los alimentos</h2>
+
+<div>
+<img src="imagenes/avena.jpg" class="draggable" draggable="true" ondragstart="drag(event)" id="avena" onerror="this.style.display='none'">
+<img src="imagenes/manzana.jpg" class="draggable" draggable="true" ondragstart="drag(event)" id="manzana" onerror="this.style.display='none'">
+<img src="imagenes/arroz_integral.jpg" class="draggable" draggable="true" ondragstart="drag(event)" id="arroz" onerror="this.style.display='none'">
+<img src="imagenes/pechuga.jpg" class="draggable" draggable="true" ondragstart="drag(event)" id="pechuga" onerror="this.style.display='none'">
+<img src="imagenes/yogurt.jpg" class="draggable" draggable="true" ondragstart="drag(event)" id="yogurt" onerror="this.style.display='none'">
+<img src="imagenes/refresco.jpg" class="draggable" draggable="true" ondragstart="drag(event)" id="refresco" onerror="this.style.display='none'">
+<img src="imagenes/papas_fritas.jpg" class="draggable" draggable="true" ondragstart="drag(event)" id="papas" onerror="this.style.display='none'">
+<img src="imagenes/galletas.jpg" class="draggable" draggable="true" ondragstart="drag(event)" id="galletas" onerror="this.style.display='none'">
+<img src="imagenes/pan_dulce.jpg" class="draggable" draggable="true" ondragstart="drag(event)" id="pan" onerror="this.style.display='none'">
+</div>
+
+<div class="drop-area">
+<div class="zona" id="saludables" ondrop="drop(event)" ondragover="allowDrop(event)">
+<h4>Alimentos Saludables</h4>
+</div>
+
+<div class="zona" id="noSaludables" ondrop="drop(event)" ondragover="allowDrop(event)">
+<h4>Alimentos Poco Saludables</h4>
+</div>
+</div>
+
+<p id="mensaje" class="resultado"></p>
+</section>
+
+<section id="equipo" class="seccion">
+<h2>Equipo de Especialistas</h2>
+
+<div class="card">
+<img src="imagenes/bryan.jpg" onerror="this.style.display='none'">
+<h3>Bryan Armando Soto Hernández</h3>
+<button onclick="abrirModal('Bryan Armando Soto Hernández','Nutrición Clínica','7152177010')">Ver información</button>
+</div>
+
+<div class="card">
+<img src="imagenes/kasandra.jpg" onerror="this.style.display='none'">
+<h3>Kasandra Lizeth Reyes Segura</h3>
+<button onclick="abrirModal('Kasandra Lizeth Reyes Segura','Educación Nutricional','7151356598')">Ver información</button>
+</div>
+
+<div class="card">
+<img src="imagenes/grettel.jpg" onerror="this.style.display='none'">
+<h3>Grettel Dolores Solis Ochoa</h3>
+<button onclick="abrirModal('Grettel Dolores Solis Ochoa','Dietoterapia','7151120777')">Ver información</button>
+</div>
+
+<div class="card">
+<img src="imagenes/fernanda.jpg" onerror="this.style.display='none'">
+<h3>María Fernanda Castro Argueta</h3>
+<button onclick="abrirModal('María Fernanda Castro Argueta','Diabetes Mellitus','7151463123')">Ver información</button>
+</div>
+
+</section>
+
+<div id="modal" class="modal">
+<div class="modal-contenido">
+<span class="cerrar" onclick="cerrarModal()">&times;</span>
+<h3 id="nombreEsp"></h3>
+<p><strong>Especialidad:</strong> <span id="esp"></span></p>
+<p><strong>Teléfono:</strong> <span id="tel"></span></p>
+<p><strong>Horario:</strong> Lunes a Viernes 9:00 am - 6:00 pm</p>
+<p><strong>Costo:</strong> $400 MXN consulta inicial</p>
+<p><strong>Ubicación:</strong> Clínica Integral GLUCOCONTROL, Dr. Emilio García esquina con Degollado, Zitácuaro, Michoacán.</p>
+</div>
+</div>
+
+<footer>
+GLUCOCONTROL © 2026 | Atención Integral en Diabetes Mellitus
+</footer>
+
+<script>
+function mostrarSeccion(id){
+let secciones=document.querySelectorAll(".seccion");
+secciones.forEach(s=>s.classList.remove("visible"));
+document.getElementById(id).classList.add("visible");
+}
+
+function allowDrop(ev){ev.preventDefault();}
+function drag(ev){ev.dataTransfer.setData("id",ev.target.id);}
+
+function drop(ev){
+ev.preventDefault();
+let id=ev.dataTransfer.getData("id");
+let elemento=document.getElementById(id);
+ev.target.appendChild(elemento);
+
+let saludables=["avena","manzana","arroz","pechuga","yogurt"];
+let noSaludables=["refresco","papas","galletas","pan"];
+
+let mensaje=document.getElementById("mensaje");
+
+if(saludables.includes(id) && ev.target.id==="saludables"){
+mensaje.innerHTML="✔ Correcto";
+mensaje.style.color="green";
+}
+else if(noSaludables.includes(id) && ev.target.id==="noSaludables"){
+mensaje.innerHTML="✔ Correcto";
+mensaje.style.color="green";
+}
+else{
+mensaje.innerHTML="✘ Incorrecto";
+mensaje.style.color="red";
+}
+}
+
+function abrirModal(nombre,especialidad,telefono){
+document.getElementById("nombreEsp").innerText=nombre;
+document.getElementById("esp").innerText=especialidad;
+document.getElementById("tel").innerText=telefono;
+document.getElementById("modal").style.display="block";
+}
+
+function cerrarModal(){
+document.getElementById("modal").style.display="none";
+}
+</script>
+
+</body>
+</html>
