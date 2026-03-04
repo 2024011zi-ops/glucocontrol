@@ -43,8 +43,54 @@ footer{background:#1e3c72;color:white;text-align:center;padding:18px;margin-top:
 </nav>
 
 <section id="inicio" class="seccion visible">
-<h2>Bienvenido</h2>
-<p>Plataforma educativa para el manejo nutricional en Diabetes Mellitus Tipo 2.</p>
+<h2>Bienvenido a GLUCOCONTROL</h2>
+<p>
+GLUCOCONTROL es una plataforma educativa diseñada para brindar información clara y profesional a personas con Diabetes Mellitus Tipo 2.
+</p>
+<p>
+El control adecuado de la diabetes requiere educación constante, alimentación equilibrada, actividad física regular y seguimiento médico.
+</p>
+<p>
+Aquí encontrarás orientación nutricional y acceso a especialistas capacitados para el manejo integral de la enfermedad.
+</p>
+</section>
+
+<section id="educacion" class="seccion">
+<h2>Educación sobre Diabetes Mellitus Tipo 2</h2>
+
+<div class="educacion-bloque">
+<h3>¿Qué es la Diabetes Mellitus Tipo 2?</h3>
+<p>Es una enfermedad metabólica crónica caracterizada por resistencia a la insulina y elevación persistente de glucosa en sangre.</p>
+<p>Si no se controla adecuadamente puede provocar complicaciones cardiovasculares, daño renal, neuropatías y problemas visuales.</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Resistencia a la insulina</h3>
+<p>En esta condición las células no responden correctamente a la insulina, dificultando la entrada de glucosa.</p>
+<p>Factores como sobrepeso, sedentarismo y antecedentes familiares influyen en su desarrollo.</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Alimentación y control glucémico</h3>
+<p>Una alimentación equilibrada ayuda a mantener niveles estables de glucosa y prevenir complicaciones.</p>
+<p>Se recomienda priorizar verduras, frutas en porciones controladas y cereales integrales.</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Importancia de la fibra</h3>
+<p>La fibra retrasa la absorción de glucosa y ayuda a evitar picos bruscos.</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Actividad física</h3>
+<p>El ejercicio mejora la sensibilidad a la insulina y contribuye al control del peso corporal.</p>
+</div>
+
+<div class="educacion-bloque">
+<h3>Seguimiento médico</h3>
+<p>El control periódico permite evaluar niveles de glucosa y prevenir complicaciones.</p>
+</div>
+
 </section>
 
 <section id="actividades" class="seccion">
@@ -75,9 +121,27 @@ footer{background:#1e3c72;color:white;text-align:center;padding:18px;margin-top:
 <h2>Equipo de Especialistas</h2>
 
 <div class="card">
+<img src="imagenes/bryan.jpg">
+<h3>Bryan Armando Soto Hernández</h3>
+<button onclick="abrirModal('Bryan Armando Soto Hernández','Nutrición Clínica','7152177010')">Ver información</button>
+</div>
+
+<div class="card">
 <img src="imagenes/kasandra.jpg">
 <h3>Kasandra Lizeth Reyes Segura</h3>
 <button onclick="abrirModal('Kasandra Lizeth Reyes Segura','Educación Nutricional','7151356598')">Ver información</button>
+</div>
+
+<div class="card">
+<img src="imagenes/grettel.jpg">
+<h3>Grettel Dolores Solis Ochoa</h3>
+<button onclick="abrirModal('Grettel Dolores Solis Ochoa','Dietoterapia','7151120777')">Ver información</button>
+</div>
+
+<div class="card">
+<img src="imagenes/fernanda.jpg">
+<h3>María Fernanda Castro Argueta</h3>
+<button onclick="abrirModal('María Fernanda Castro Argueta','Diabetes Mellitus','7151463123')">Ver información</button>
 </div>
 
 </section>
@@ -88,8 +152,15 @@ footer{background:#1e3c72;color:white;text-align:center;padding:18px;margin-top:
 <h3 id="nombreEsp"></h3>
 <p><strong>Especialidad:</strong> <span id="esp"></span></p>
 <p><strong>Teléfono:</strong> <span id="tel"></span></p>
+<p><strong>Horario:</strong> Lunes a Viernes 9:00 am - 6:00 pm</p>
+<p><strong>Costo:</strong> $400 MXN consulta inicial</p>
+<p><strong>Ubicación:</strong> Clínica Integral GLUCOCONTROL, Dr. Emilio García esquina con Degollado, Zitácuaro, Michoacán.</p>
 </div>
 </div>
+
+<footer>
+GLUCOCONTROL © 2026 | Atención Integral en Diabetes Mellitus
+</footer>
 
 <script>
 let alimentoSeleccionado=null;
