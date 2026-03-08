@@ -1,45 +1,63 @@
-// selección de alimentos
+<!DOCTYPE html>
+<html lang="es">
 
-let alimentoSeleccionado = null;
+<head>
 
-document.querySelectorAll(".alimento").forEach(function(alimento){
+<meta charset="UTF-8">
+<title>Actividad</title>
 
-alimento.addEventListener("click", function(e){
+<link rel="stylesheet" href="../css/estilos.css">
 
-e.stopPropagation();
+</head>
 
-// si ya está seleccionado se deselecciona
+<body>
 
-if(alimentoSeleccionado === this){
+<header>
 
-this.classList.remove("seleccionado");
-alimentoSeleccionado = null;
-return;
+<a href="../index.html">
+<img src="../imagenes/logo.png" class="logo">
+</a>
 
-}
+<h1>GLUCOCONTROL</h1>
 
-// quitar selección anterior
+<nav>
+<a href="../index.html">Inicio</a>
+<a href="educacion.html">Educación</a>
+<a href="actividades.html">Actividades</a>
+<a href="plato.html">Plato saludable</a>
+<a href="especialistas.html">Especialistas</a>
+</nav>
 
-if(alimentoSeleccionado){
-alimentoSeleccionado.classList.remove("seleccionado");
-}
+</header>
 
-// seleccionar nuevo
+<section class="contenedor">
 
-this.classList.add("seleccionado");
-alimentoSeleccionado = this;
+<h2>Actividad: Identifica alimentos saludables</h2>
 
-});
+<p>Selecciona los alimentos y decide si son recomendables para personas con diabetes.</p>
 
-});
+<div>
 
-// clic fuera para deseleccionar
+<img src="../imagenes/manzana.png" class="imagenActividad alimento" onclick="seleccionar(this)">
+<img src="../imagenes/pan_dulce.png" class="imagenActividad alimento" onclick="seleccionar(this)">
+<img src="../imagenes/brocoli.png" class="imagenActividad alimento" onclick="seleccionar(this)">
+<img src="../imagenes/refresco.png" class="imagenActividad alimento" onclick="seleccionar(this)">
 
-document.addEventListener("click", function(){
+</div>
 
-if(alimentoSeleccionado){
-alimentoSeleccionado.classList.remove("seleccionado");
-alimentoSeleccionado = null;
-}
+</section>
 
-});
+<footer>
+
+<img src="../imagenes/logo.png" class="logoFooter">
+
+<p>
+GLUCOCONTROL © 2026 | Atención Integral en Diabetes Mellitus
+</p>
+
+</footer>
+
+<script src="../js/actividades.js"></script>
+
+</body>
+</html>
