@@ -1,37 +1,33 @@
-let seleccion = null;
+let alimentoSeleccionado = null;
 
 function seleccionar(elemento){
 
-if(seleccion === elemento){
+if(alimentoSeleccionado === elemento){
 
 elemento.classList.remove("seleccionado");
-seleccion = null;
+alimentoSeleccionado = null;
 return;
 
 }
 
-if(seleccion){
-seleccion.classList.remove("seleccionado");
+if(alimentoSeleccionado){
+alimentoSeleccionado.classList.remove("seleccionado");
 }
 
 elemento.classList.add("seleccionado");
-seleccion = elemento;
-
-}
-
-function limpiarSeleccion(){
-
-if(seleccion){
-seleccion.classList.remove("seleccionado");
-seleccion = null;
-}
+alimentoSeleccionado = elemento;
 
 }
 
 document.addEventListener("click", function(e){
 
-if(!e.target.closest(".imagenActividad")){
-limpiarSeleccion();
+if(!e.target.classList.contains("alimento")){
+
+if(alimentoSeleccionado){
+alimentoSeleccionado.classList.remove("seleccionado");
+alimentoSeleccionado = null;
+}
+
 }
 
 });
