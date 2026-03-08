@@ -1,10 +1,14 @@
 let alimentoSeleccionado = null;
 
-function seleccionar(elemento){
+const alimentos = document.querySelectorAll(".alimento");
 
-if(alimentoSeleccionado === elemento){
+alimentos.forEach(alimento => {
 
-elemento.classList.remove("seleccionado");
+alimento.addEventListener("click", () => {
+
+if(alimentoSeleccionado === alimento){
+
+alimento.classList.remove("seleccionado");
 alimentoSeleccionado = null;
 return;
 
@@ -14,39 +18,34 @@ if(alimentoSeleccionado){
 alimentoSeleccionado.classList.remove("seleccionado");
 }
 
-elemento.classList.add("seleccionado");
-alimentoSeleccionado = elemento;
-
-}
-
-function respuesta(esSaludable){
-
-if(!alimentoSeleccionado){
-document.getElementById("resultado").innerText = "Selecciona primero un alimento.";
-return;
-}
-
-let nombre = alimentoSeleccionado.src;
-
-let correctos = ["manzana","arroz_integral","pechuga","yogurt"];
-
-let esCorrecto = correctos.some(alimento => nombre.includes(alimento));
-
-if(esSaludable === esCorrecto){
-document.getElementById("resultado").innerText = "Correcto ✔";
-}else{
-document.getElementById("resultado").innerText = "Incorrecto ✖";
-}
-
-}
-
-document.addEventListener("click", function(e){
-
-if(!e.target.classList.contains("alimento")){
-if(alimentoSeleccionado){
-alimentoSeleccionado.classList.remove("seleccionado");
-alimentoSeleccionado = null;
-}
-}
+alimento.classList.add("seleccionado");
+alimentoSeleccionado = alimento;
 
 });
+
+});
+
+function clasificar(tipo){
+
+if(!alimentoSeleccionado){
+
+document.getElementById("resultado").textContent = "Primero selecciona un alimento.";
+return;
+
+}
+
+if(tipo === "saludable"){
+
+alimentoSeleccionado.style.border = "4px solid green";
+document.getElementById("resultado").textContent = "Seleccionaste: saludable";
+
+}
+
+if(tipo === "no_saludable"){
+
+alimentoSeleccionado.style.border = "4px solid red";
+document.getElementById("resultado").textContent = "Seleccionaste: no saludable";
+
+}
+
+}
