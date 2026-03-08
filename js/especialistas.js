@@ -1,17 +1,24 @@
-// Cerrar modal al hacer clic fuera
+function abrirModal(nombre, telefono){
 
-window.addEventListener("click", function(event){
+let modal = document.getElementById("modal");
+let contenido = document.getElementById("modalContenido");
 
-let modales = document.querySelectorAll(".modal");
+contenido.innerHTML = "<h2>"+nombre+"</h2><p>Teléfono: "+telefono+"</p>";
 
-modales.forEach(function(modal){
-
-if(event.target === modal){
-
-modal.style.display = "none";
+modal.style.display = "flex";
 
 }
 
-});
+function cerrarModal(){
+document.getElementById("modal").style.display="none";
+}
 
-});
+window.onclick = function(event){
+
+let modal = document.getElementById("modal");
+
+if(event.target == modal){
+modal.style.display = "none";
+}
+
+}
