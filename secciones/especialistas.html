@@ -4,53 +4,15 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Actividad</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Especialistas | GLUCOCONTROL</title>
+
+<link rel="stylesheet" href="../css/estilos.css">
 
 <link rel="icon" type="image/png" sizes="64x64" href="../imagenes/logo.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../imagenes/logo.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../imagenes/logo.png">
-
-</head>
-
-<style>
-
-.tarjeta{
-background:white;
-padding:20px;
-margin:20px;
-border-radius:10px;
-box-shadow:0px 0px 10px rgba(0,0,0,0.2);
-text-align:center;
-cursor:pointer;
-width:200px;
-display:inline-block;
-}
-
-.tarjeta img{
-width:120px;
-border-radius:50%;
-}
-
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-align-items:center;
-justify-content:center;
-}
-
-.modalContenido{
-background:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
-}
-
-</style>
 
 </head>
 
@@ -65,58 +27,104 @@ text-align:center;
 <h1>GLUCOCONTROL</h1>
 
 <nav>
+
 <a href="../index.html">Inicio</a>
 <a href="educacion.html">Educación</a>
 <a href="actividades.html">Actividades</a>
 <a href="plato.html">Plato saludable</a>
 <a href="especialistas.html">Especialistas</a>
+
 </nav>
 
 </header>
 
-<section class="contenedor">
+
+<section class="contenido">
 
 <h2>Nuestros Especialistas</h2>
 
-<div class="tarjeta" onclick="abrirModal('Bryan Armando Soto Hernández','Nutrición clínica y diabetes','$500','7152177010')">
-<img src="../imagenes/bryan.jpg">
-<p>Bryan Armando Soto Hernández</p>
+<div class="especialistas">
+
+<div class="tarjeta">
+
+<img src="../imagenes/bryan.jpg" class="foto-especialista">
+
+<h3>Bryan Armando Soto Hernández</h3>
+
+<p><strong>Especialidad:</strong> Nutrición clínica y control de diabetes</p>
+
+<p><strong>Costo de consulta:</strong> $350 MXN</p>
+
+<p><strong>Teléfono:</strong> 7152177010</p>
+
 </div>
 
-<div class="tarjeta" onclick="abrirModal('Kasandra Lizeth Reyes Segura','Educación en diabetes','$450','7151356598')">
-<img src="../imagenes/kasandra.jpg">
-<p>Kasandra Lizeth Reyes Segura</p>
+
+<div class="tarjeta">
+
+<img src="../imagenes/kasandra.jpg" class="foto-especialista">
+
+<h3>Kasandra Lizeth Reyes Segura</h3>
+
+<p><strong>Especialidad:</strong> Educación nutricional y prevención de diabetes</p>
+
+<p><strong>Costo de consulta:</strong> $350 MXN</p>
+
+<p><strong>Teléfono:</strong> 7151356598</p>
+
 </div>
 
-<div class="tarjeta" onclick="abrirModal('Grettel Dolores Solis Ochoa','Nutrición metabólica','$450','7151120777')">
-<img src="../imagenes/grettel.jpg">
-<p>Grettel Dolores Solis Ochoa</p>
+
+<div class="tarjeta">
+
+<img src="../imagenes/grettel.jpg" class="foto-especialista">
+
+<h3>Grettel Dolores Solis Ochoa</h3>
+
+<p><strong>Especialidad:</strong> Nutrición comunitaria y promoción de la salud</p>
+
+<p><strong>Costo de consulta:</strong> $350 MXN</p>
+
+<p><strong>Teléfono:</strong> 7151120777</p>
+
 </div>
 
-<div class="tarjeta" onclick="abrirModal('María Fernanda Castro Argueta','Nutrición preventiva','$450','7151463123')">
-<img src="../imagenes/fernanda.jpg">
-<p>María Fernanda Castro Argueta</p>
+
+<div class="tarjeta">
+
+<img src="../imagenes/fernanda.jpg" class="foto-especialista">
+
+<h3>María Fernanda Castro Argueta</h3>
+
+<p><strong>Especialidad:</strong> Nutrición preventiva y control metabólico</p>
+
+<p><strong>Costo de consulta:</strong> $350 MXN</p>
+
+<p><strong>Teléfono:</strong> 7151463123</p>
+
+</div>
+
+</div>
+
+
+<div class="informacion-clinica">
+
+<h3>Ubicación de la clínica</h3>
+
+<p>
+Dr. Emilio García esquina Degollado  
+<br>
+Zitácuaro, Michoacán
+</p>
+
 </div>
 
 </section>
 
-<div id="modal" class="modal">
-
-<div class="modalContenido">
-
-<span onclick="cerrarModal()" style="cursor:pointer;font-size:20px;">✖</span>
-
-<div id="modalContenido"></div>
-
-<p><b>Dirección:</b> Dr. Emilio García esquina Degollado, Zitácuaro, Michoacán</p>
-
-</div>
-
-</div>
 
 <footer>
 
-<img src="../imagenes/logo.png" class="logoFooter">
+<img src="../imagenes/logo.png" class="logo-footer">
 
 <p>
 GLUCOCONTROL © 2026 | Atención Integral en Diabetes Mellitus
@@ -124,7 +132,6 @@ GLUCOCONTROL © 2026 | Atención Integral en Diabetes Mellitus
 
 </footer>
 
-<script src="../js/especialistas.js"></script>
-
 </body>
+
 </html>
