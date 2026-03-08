@@ -1,45 +1,37 @@
-// selección de alimentos
+let seleccion = null;
 
-let alimentoSeleccionado = null;
+function seleccionar(elemento){
 
-document.querySelectorAll(".alimento").forEach(function(alimento){
+if(seleccion === elemento){
 
-alimento.addEventListener("click", function(e){
-
-e.stopPropagation();
-
-// si ya está seleccionado se deselecciona
-
-if(alimentoSeleccionado === this){
-
-this.classList.remove("seleccionado");
-alimentoSeleccionado = null;
+elemento.classList.remove("seleccionado");
+seleccion = null;
 return;
 
 }
 
-// quitar selección anterior
-
-if(alimentoSeleccionado){
-alimentoSeleccionado.classList.remove("seleccionado");
+if(seleccion){
+seleccion.classList.remove("seleccionado");
 }
 
-// seleccionar nuevo
+elemento.classList.add("seleccionado");
+seleccion = elemento;
 
-this.classList.add("seleccionado");
-alimentoSeleccionado = this;
+}
 
-});
+function limpiarSeleccion(){
 
-});
+if(seleccion){
+seleccion.classList.remove("seleccionado");
+seleccion = null;
+}
 
-// clic fuera para deseleccionar
+}
 
-document.addEventListener("click", function(){
+document.addEventListener("click", function(e){
 
-if(alimentoSeleccionado){
-alimentoSeleccionado.classList.remove("seleccionado");
-alimentoSeleccionado = null;
+if(!e.target.closest(".imagenActividad")){
+limpiarSeleccion();
 }
 
 });
