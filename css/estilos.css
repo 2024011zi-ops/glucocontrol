@@ -102,3 +102,13 @@ border-radius:8px;
 .seleccionado{
 border:4px solid #2f4c80;
 }
+.imagenActividad{
+width:150px;
+margin:15px;
+cursor:pointer;
+border-radius:8px;
+}
+
+.seleccionado{
+border:4px solid #2f4c80;
+}
