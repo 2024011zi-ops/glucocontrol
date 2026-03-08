@@ -1,42 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
-<title>Actividad</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/png" sizes="64x64" href="../imagenes/logo.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../imagenes/logo.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../imagenes/logo.png">
+<title>Actividades | GLUCOCONTROL</title>
 
-</head>
-<style>
+<link rel="stylesheet" href="../css/estilos.css">
 
-.botonesActividad{
-margin-top:20px;
-}
-
-.botonesActividad button{
-padding:10px 20px;
-margin:10px;
-font-size:16px;
-border:none;
-border-radius:6px;
-cursor:pointer;
-}
-
-.saludable{
-background:#4CAF50;
-color:white;
-}
-
-.noSaludable{
-background:#d9534f;
-color:white;
-}
-
-</style>
+<link rel="icon" type="image/png" href="../imagenes/logo.png">
 
 </head>
 
@@ -51,55 +24,57 @@ color:white;
 <h1>GLUCOCONTROL</h1>
 
 <nav>
+
 <a href="../index.html">Inicio</a>
 <a href="educacion.html">Educación</a>
 <a href="actividades.html">Actividades</a>
 <a href="plato.html">Plato saludable</a>
 <a href="especialistas.html">Especialistas</a>
+
 </nav>
 
 </header>
 
-<section class="contenedor">
+
+<section class="contenido">
 
 <h2>Actividad: Clasifica los alimentos</h2>
 
-<p>Selecciona un alimento y clasifícalo como saludable o no saludable para personas con diabetes.</p>
+<p>Selecciona los alimentos y clasifícalos como saludables o no saludables.</p>
 
-<div>
 
-<img src="../imagenes/manzana.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
-<img src="../imagenes/arroz_integral.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
-<img src="../imagenes/galletas.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
-<img src="../imagenes/pan_dulce.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
-<img src="../imagenes/papas_fritas.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
-<img src="../imagenes/pechuga.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
-<img src="../imagenes/refresco.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
-<img src="../imagenes/yogurt.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
+<div class="alimentos">
 
-</div>
-
-<div class="botonesActividad">
-
-<button class="saludable" onclick="respuesta(true)">Saludable</button>
-
-<button class="noSaludable" onclick="respuesta(false)">No saludable</button>
+<img src="../imagenes/manzana.jpg" class="alimento">
+<img src="../imagenes/arroz_integral.jpg" class="alimento">
+<img src="../imagenes/galletas.jpg" class="alimento">
+<img src="../imagenes/pan_dulce.jpg" class="alimento">
+<img src="../imagenes/papas_fritas.jpg" class="alimento">
+<img src="../imagenes/pechuga.jpg" class="alimento">
+<img src="../imagenes/refresco.jpg" class="alimento">
+<img src="../imagenes/yogurt.jpg" class="alimento">
 
 </div>
 
-<p id="resultado"></p>
+
+<div class="botones-clasificacion">
+
+<button class="btn-saludable">Saludable</button>
+<button class="btn-no-saludable">No saludable</button>
+
+</div>
 
 </section>
 
+
 <footer>
 
-<img src="../imagenes/logo.png" class="logoFooter">
+<img src="../imagenes/logo.png" class="logo-footer">
 
-<p>
-GLUCOCONTROL © 2026 | Atención Integral en Diabetes Mellitus
-</p>
+<p>GLUCOCONTROL © 2026 | Atención Integral en Diabetes Mellitus</p>
 
 </footer>
+
 
 <script src="../js/actividades.js"></script>
 
