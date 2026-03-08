@@ -16,7 +16,15 @@ padding:20px;
 margin:20px;
 border-radius:10px;
 box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+text-align:center;
 cursor:pointer;
+width:200px;
+display:inline-block;
+}
+
+.tarjeta img{
+width:120px;
+border-radius:50%;
 }
 
 .modal{
@@ -36,12 +44,6 @@ background:white;
 padding:30px;
 border-radius:10px;
 text-align:center;
-}
-
-.cerrar{
-cursor:pointer;
-font-size:20px;
-float:right;
 }
 
 </style>
@@ -68,42 +70,45 @@ float:right;
 
 </header>
 
-
 <section class="contenedor">
 
 <h2>Nuestros Especialistas</h2>
 
-<div class="tarjeta" onclick="abrirModal('Bryan Armando Soto Hernández','7152177010')">
-Bryan Armando Soto Hernández
+<div class="tarjeta" onclick="abrirModal('Bryan Armando Soto Hernández','Nutrición clínica y diabetes','$500','7152177010')">
+<img src="../imagenes/bryan.jpg">
+<p>Bryan Armando Soto Hernández</p>
 </div>
 
-<div class="tarjeta" onclick="abrirModal('Kasandra Lizeth Reyes Segura','7151356598')">
-Kasandra Lizeth Reyes Segura
+<div class="tarjeta" onclick="abrirModal('Kasandra Lizeth Reyes Segura','Educación en diabetes','$450','7151356598')">
+<img src="../imagenes/kasandra.jpg">
+<p>Kasandra Lizeth Reyes Segura</p>
 </div>
 
-<div class="tarjeta" onclick="abrirModal('Grettel Dolores Solis Ochoa','7151120777')">
-Grettel Dolores Solis Ochoa
+<div class="tarjeta" onclick="abrirModal('Grettel Dolores Solis Ochoa','Nutrición metabólica','$450','7151120777')">
+<img src="../imagenes/grettel.jpg">
+<p>Grettel Dolores Solis Ochoa</p>
 </div>
 
-<div class="tarjeta" onclick="abrirModal('María Fernanda Castro Argueta','7151463123')">
-María Fernanda Castro Argueta
+<div class="tarjeta" onclick="abrirModal('María Fernanda Castro Argueta','Nutrición preventiva','$450','7151463123')">
+<img src="../imagenes/fernanda.jpg">
+<p>María Fernanda Castro Argueta</p>
 </div>
 
 </section>
-
 
 <div id="modal" class="modal">
 
 <div class="modalContenido">
 
-<span class="cerrar" onclick="cerrarModal()">✖</span>
+<span onclick="cerrarModal()" style="cursor:pointer;font-size:20px;">✖</span>
 
 <div id="modalContenido"></div>
 
-</div>
+<p><b>Dirección:</b> Dr. Emilio García esquina Degollado, Zitácuaro, Michoacán</p>
 
 </div>
 
+</div>
 
 <footer>
 
