@@ -1,1 +1,84 @@
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f5f6f8;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
 
+/* CONTENIDO PRINCIPAL */
+
+main{
+flex:1;
+}
+
+/* HEADER */
+
+header{
+background:#2f4e86;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* LOGO Y TITULO */
+
+.logoTitulo{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+}
+
+.logo{
+width:70px;
+}
+
+/* MENU */
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+background:#3e5fa4;
+color:white;
+padding:10px 15px;
+margin:5px;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+nav a:hover{
+background:#1f3c73;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+background:white;
+max-width:900px;
+margin:auto;
+margin-top:30px;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+
+footer{
+background:#2f4e86;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.logoFooter{
+width:40px;
+display:block;
+margin:auto;
+margin-bottom:10px;
+}
