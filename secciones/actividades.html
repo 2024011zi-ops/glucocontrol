@@ -8,6 +8,33 @@
 
 <link rel="stylesheet" href="../css/estilos.css">
 
+<style>
+
+.botonesActividad{
+margin-top:20px;
+}
+
+.botonesActividad button{
+padding:10px 20px;
+margin:10px;
+font-size:16px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.saludable{
+background:#4CAF50;
+color:white;
+}
+
+.noSaludable{
+background:#d9534f;
+color:white;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -32,11 +59,9 @@
 
 <section class="contenedor">
 
-<h2>Actividad: Identifica alimentos saludables</h2>
+<h2>Actividad: Clasifica los alimentos</h2>
 
-<p>
-Selecciona un alimento y decide si es recomendable o no para una persona con diabetes.
-</p>
+<p>Selecciona un alimento y clasifícalo como saludable o no saludable para personas con diabetes.</p>
 
 <div>
 
@@ -44,13 +69,22 @@ Selecciona un alimento y decide si es recomendable o no para una persona con dia
 <img src="../imagenes/arroz_integral.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
 <img src="../imagenes/galletas.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
 <img src="../imagenes/pan_dulce.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
-
 <img src="../imagenes/papas_fritas.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
 <img src="../imagenes/pechuga.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
 <img src="../imagenes/refresco.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
 <img src="../imagenes/yogurt.jpg" class="imagenActividad alimento" onclick="seleccionar(this)">
 
 </div>
+
+<div class="botonesActividad">
+
+<button class="saludable" onclick="respuesta(true)">Saludable</button>
+
+<button class="noSaludable" onclick="respuesta(false)">No saludable</button>
+
+</div>
+
+<p id="resultado"></p>
 
 </section>
 
