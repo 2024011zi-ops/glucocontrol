@@ -1,9 +1,13 @@
-function abrirModal(nombre, telefono){
+function abrirModal(nombre, especialidad, costo, telefono){
 
 let modal = document.getElementById("modal");
 let contenido = document.getElementById("modalContenido");
 
-contenido.innerHTML = "<h2>"+nombre+"</h2><p>Teléfono: "+telefono+"</p>";
+contenido.innerHTML =
+"<h2>"+nombre+"</h2>" +
+"<p><b>Especialidad:</b> "+especialidad+"</p>" +
+"<p><b>Costo consulta:</b> "+costo+"</p>" +
+"<p><b>Teléfono:</b> "+telefono+"</p>";
 
 modal.style.display = "flex";
 
