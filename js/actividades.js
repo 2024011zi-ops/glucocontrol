@@ -16,6 +16,7 @@ alimentoSeleccionado = this;
 
 });
 
+
 function clasificar(tipo){
 
 if(!alimentoSeleccionado){
@@ -27,21 +28,61 @@ return;
 
 }
 
+let nombreImagen = alimentoSeleccionado.src;
+
+
+/* alimentos saludables */
+
+let saludables = [
+"manzana",
+"arroz_integral",
+"pechuga",
+"yogurt"
+];
+
+
+/* alimentos no saludables */
+
+let noSaludables = [
+"galletas",
+"pan_dulce",
+"papas_fritas",
+"refresco"
+];
+
+
+let correcto = false;
+
+
 if(tipo === "saludable"){
 
-alimentoSeleccionado.style.border = "4px solid green";
-
-document.getElementById("resultado").textContent =
-"Clasificado como saludable.";
+correcto = saludables.some(alimento =>
+nombreImagen.includes(alimento)
+);
 
 }
 
 if(tipo === "no_saludable"){
 
-alimentoSeleccionado.style.border = "4px solid red";
+correcto = noSaludables.some(alimento =>
+nombreImagen.includes(alimento)
+);
 
-document.getElementById("resultado").textContent =
-"Clasificado como no saludable.";
+}
+
+
+let resultado = document.getElementById("resultado");
+
+
+if(correcto){
+
+resultado.textContent = "✔ Correcto";
+resultado.style.color = "green";
+
+}else{
+
+resultado.textContent = "✖ Incorrecto";
+resultado.style.color = "red";
 
 }
 
