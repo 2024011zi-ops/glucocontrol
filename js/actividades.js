@@ -2,17 +2,28 @@ let alimentoSeleccionado = null;
 
 document.querySelectorAll(".alimento").forEach(function(alimento){
 
-alimento.onclick = function(){
+alimento.onclick = function(e){
+
+e.stopPropagation();
 
 if(alimentoSeleccionado){
 alimentoSeleccionado.style.border = "none";
 }
 
 this.style.border = "4px solid blue";
-
 alimentoSeleccionado = this;
 
 };
+
+});
+
+
+document.addEventListener("click", function(){
+
+if(alimentoSeleccionado){
+alimentoSeleccionado.style.border = "none";
+alimentoSeleccionado = null;
+}
 
 });
 
@@ -30,18 +41,12 @@ return;
 
 let nombreImagen = alimentoSeleccionado.src;
 
-
-/* alimentos saludables */
-
 let saludables = [
 "manzana",
 "arroz_integral",
 "pechuga",
 "yogurt"
 ];
-
-
-/* alimentos no saludables */
 
 let noSaludables = [
 "galletas",
@@ -50,29 +55,21 @@ let noSaludables = [
 "refresco"
 ];
 
-
 let correcto = false;
 
-
 if(tipo === "saludable"){
-
 correcto = saludables.some(alimento =>
 nombreImagen.includes(alimento)
 );
-
 }
 
 if(tipo === "no_saludable"){
-
 correcto = noSaludables.some(alimento =>
 nombreImagen.includes(alimento)
 );
-
 }
 
-
 let resultado = document.getElementById("resultado");
-
 
 if(correcto){
 
