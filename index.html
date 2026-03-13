@@ -68,7 +68,39 @@ GLUCOCONTROL © 2026 | Atención Integral en Diabetes Mellitus
 </p>
 
 </footer>
+</div>
+</section>
 
+<section class="container map">
+<h2>Ubicación</h2>
+<iframe src="https://www.google.com/maps?q=Michoacan%20Mexico&output=embed"></iframe>
+</section>
+
+<section class="container">
+<h2>Inicio de Sesión</h2>
+<div class="login">
+<input type="text" placeholder="Usuario">
+<input type="password" placeholder="Contraseña">
+<button>Ingresar</button>
+<div class="visits">
+Visitas al sitio: <span id="contador">0</span>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Centro de Salud Integral | Página educativa</p>
+</footer>
+
+<script>
+if(localStorage.visitas){
+localStorage.visitas = Number(localStorage.visitas)+1;
+}else{
+localStorage.visitas = 1;
+}
+
+document.getElementById("contador").innerText = localStorage.visitas;
+</script>
 </body>
 
 </html>
