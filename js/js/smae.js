@@ -44,12 +44,17 @@ grasa: "10 g"
 
 function buscarAlimento(){
 
-let input = document.getElementById("busqueda").value.toLowerCase();
+let input = document.getElementById("busqueda").value.toLowerCase().trim();
 
 let resultado = document.getElementById("resultado");
 
+if(input === ""){
+resultado.innerHTML = "Escribe un alimento";
+return;
+}
+
 let encontrado = alimentos.find(alimento =>
-alimento.nombre.includes(input)
+alimento.nombre.toLowerCase().includes(input)
 );
 
 if(encontrado){
@@ -65,7 +70,7 @@ resultado.innerHTML = `
 
 }else{
 
-resultado.innerHTML = "Alimento no encontrado";
+resultado.innerHTML = "❌ Alimento no encontrado";
 
 }
 
