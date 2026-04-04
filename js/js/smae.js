@@ -1,4 +1,3 @@
-alert("JS conectado");
 const alimentos = [
 {
 nombre: "manzana",
@@ -49,14 +48,14 @@ let input = document.getElementById("busqueda").value.toLowerCase().trim();
 
 let resultado = document.getElementById("resultado");
 
+console.log("Buscando:", input);
+
 if(input === ""){
-resultado.innerHTML = "Escribe un alimento";
+resultado.innerHTML = "⚠️ Escribe un alimento";
 return;
 }
 
-let encontrado = alimentos.find(alimento =>
-alimento.nombre.toLowerCase().includes(input)
-);
+let encontrado = alimentos.find(a => a.nombre === input);
 
 if(encontrado){
 
@@ -71,7 +70,7 @@ resultado.innerHTML = `
 
 }else{
 
-resultado.innerHTML = "❌ Alimento no encontrado";
+resultado.innerHTML = "❌ No se encontró el alimento";
 
 }
 
