@@ -55,7 +55,9 @@ resultado.innerHTML = "⚠️ Escribe un alimento";
 return;
 }
 
-let encontrado = alimentos.find(a => a.nombre === input);
+let encontrado = alimentos.find(a =>
+a.nombre.toLowerCase().includes(input)
+);
 
 if(encontrado){
 
