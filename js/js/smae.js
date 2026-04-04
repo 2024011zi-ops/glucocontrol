@@ -38,9 +38,48 @@ porcion: "1 pieza",
 cho: "30 g",
 proteina: "3 g",
 grasa: "10 g"
+},
+{
+nombre: "plátano",
+grupo: "Frutas",
+porcion: "1 pieza",
+cho: "15 g",
+proteina: "1 g",
+grasa: "0 g"
+},
+{
+nombre: "tortilla",
+grupo: "Cereales",
+porcion: "1 pieza",
+cho: "15 g",
+proteina: "2 g",
+grasa: "1 g"
+},
+{
+nombre: "huevo",
+grupo: "Proteínas",
+porcion: "1 pieza",
+cho: "0 g",
+proteina: "6 g",
+grasa: "5 g"
+},
+{
+nombre: "leche",
+grupo: "Lácteos",
+porcion: "1 taza",
+cho: "12 g",
+proteina: "8 g",
+grasa: "5 g"
+},
+{
+nombre: "frijoles",
+grupo: "Leguminosas",
+porcion: "1/2 taza",
+cho: "20 g",
+proteina: "7 g",
+grasa: "1 g"
 }
 ];
-
 
 function buscarAlimento(){
 
@@ -77,3 +116,10 @@ resultado.innerHTML = "❌ No se encontró el alimento";
 }
 
 }
+document.getElementById("busqueda").addEventListener("keypress", function(event){
+
+if(event.key === "Enter"){
+buscarAlimento();
+}
+
+});
