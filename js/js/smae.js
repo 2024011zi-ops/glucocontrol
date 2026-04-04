@@ -1,3 +1,4 @@
+alert("JS conectado");
 const alimentos = [
 {
 nombre: "manzana",
