@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agendar consulta | GLUCOCONTROL</title>
+
+<link rel="stylesheet" href="../css/estilos.css">
+
+<link rel="icon" href="../imagenes/favicon.png">
+
+</head>
+
+<body>
+
+<header>
+
+<a href="../index.html">
+<img src="../imagenes/logo.png" class="logo">
+</a>
+
+<h1>GLUCOCONTROL</h1>
+
+<nav>
+
+<a href="../index.html">Inicio</a>
+<a href="educacion.html">Educación</a>
+<a href="actividades.html">Actividades</a>
+<a href="plato.html">Plato saludable</a>
+<a href="especialistas.html">Especialistas</a>
+<a href="smae.html">SMAE</a>
+<a href="ayuda.html">❓ Ayuda</a>
+<a href="agenda.html">📅 Agenda</a>
+
+</nav>
+
+</header>
+
+
+<section class="contenido">
+
+<h2>Agendar consulta</h2>
+
+<p>Llena los siguientes datos para solicitar una consulta.</p>
+
+<form id="formAgenda">
+
+<input type="text" id="nombre" placeholder="Nombre completo" required><br><br>
+
+<input type="tel" id="telefono" placeholder="Teléfono" required><br><br>
+
+<select id="especialista" required>
+
+<option value="">Selecciona especialista</option>
+<option>Bryan Soto</option>
+<option>Kasandra Reyes</option>
+<option>Grettel Solis</option>
+<option>Fernanda Castro</option>
+
+</select><br><br>
+
+<input type="date" id="fecha" required><br><br>
+
+<button type="submit">Agendar</button>
+
+</form>
+
+<p id="mensaje"></p>
+
+</section>
+
+
+<footer>
+
+<img src="../imagenes/logo.png" class="logo-footer">
+
+<p>
+GLUCOCONTROL © 2026 | Atención Integral en Diabetes Mellitus
+</p>
+
+</footer>
+
+<script src="../js/agenda.js"></script>
+
+</body>
+
+</html>
