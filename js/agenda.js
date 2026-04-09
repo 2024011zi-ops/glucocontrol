@@ -18,7 +18,7 @@ numeroEspecialista = "527152177010";
 }
 
 if(especialista === "Kasandra Reyes"){
-numeroEspecialista = "527151356598";
+numeroEspecialista = 527151463123
 }
 
 if(especialista === "Grettel Solis"){
@@ -26,7 +26,7 @@ numeroEspecialista = "527151120777";
 }
 
 if(especialista === "Fernanda Castro"){
-numeroEspecialista = "527151463123";
+numeroEspecialista = "527151356598";
 }
 
 /* Crear enlace de WhatsApp */
